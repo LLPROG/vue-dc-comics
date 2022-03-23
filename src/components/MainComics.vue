@@ -7,10 +7,12 @@
         </button>
       </div>
       <div class="container">
-        <CardComics v-for="item, index in comics" :key="index"
+        <div class="cards-cont">
+          <CardComics v-for="item, index in comics" :key="index"
           :img="item.thumb"
           :serie="item.series"
         />
+        </div>
         <button class="load-cards">
           load more
         </button>
@@ -158,11 +160,28 @@ export default {
 .top-content {
   background-color: #1C1C1C;
   color: white;
+  position: relative;
 
   .hero {
     width: 100%;
     height: 30rem;
     background-image: url('../assets/img/jumbotron.jpg');
+  }
+
+  .cards-cont {
+      padding: 2rem 0;
+      display: flex;
+      justify-content: stretch;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-right: -1rem;
+  }
+
+  .load-cards {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translate(-50%);
   }
 }
 .bottom-content {

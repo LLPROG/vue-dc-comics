@@ -17,10 +17,17 @@ export default {
 
 <style scoped lang="scss">
 .card {
-  width: 200px;
-  height: 400px;
+  width: calc(100% / 6 - 1rem);
+  // overflow: hidden;
   img {
     width: 100%;
+    height: 60%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  p {
+    margin-top: 2rem;
   }
 }
 </style>
