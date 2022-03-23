@@ -166,15 +166,29 @@ export default {
     width: 100%;
     height: 30rem;
     background-image: url('../assets/img/jumbotron.jpg');
+
+    .current-series {
+      position: absolute;
+      top: 40%;
+      left: 5%;
+
+      padding: .5rem 1.5rem;
+      color: white;
+      text-transform: uppercase;
+      background-color: $blue_slice;
+      border: transparent;
+      font-weight: bold;
+      font-size: 1.7em;
+    }
   }
 
   .cards-cont {
-      padding: 2rem 0;
-      display: flex;
-      justify-content: stretch;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-right: -1rem;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-right: -1rem;
   }
 
   .load-cards {
@@ -182,6 +196,14 @@ export default {
     left: 50%;
     bottom: 1rem;
     transform: translate(-50%);
+
+    padding: .5rem 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: $blue_slice;
+    border: transparent;
+    font-weight: bold;
+
   }
 }
 .bottom-content {
