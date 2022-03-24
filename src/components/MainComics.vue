@@ -157,6 +157,8 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/style.scss';
+@import '../assets/partial/_mixin.scss';
+
 .top-content {
   background-color: #1C1C1C;
   color: white;
@@ -168,9 +170,7 @@ export default {
     background-image: url('../assets/img/jumbotron.jpg');
 
     .current-series {
-      position: absolute;
-      top: 40%;
-      left: 5%;
+      @include positions ($pos: absolute, $top: 40%, $right: none, $bottom: none, $left: 5%);
 
       padding: .5rem 1.5rem;
       color: white;
@@ -192,10 +192,7 @@ export default {
   }
 
   .load-cards {
-    position: absolute;
-    left: 50%;
-    bottom: 1rem;
-    transform: translate(-50%);
+    @include positions ($pos: absolute, $top: none, $right: none, $bottom: 1rem, $left: 50%, $Tleft: -50%);
 
     padding: .5rem 1.5rem;
     color: white;
@@ -216,8 +213,7 @@ export default {
     .card {
       height: 150px;
       width: 100%;
-      display: flex;
-      align-items: center;
+      @include flexBox ($just: none);
       padding: 1rem;
       color: white;
       text-transform: uppercase;

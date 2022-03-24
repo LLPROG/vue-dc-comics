@@ -79,6 +79,8 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/style.scss';
+@import '../assets/partial/_mixin.scss';
+
 header {
   background-color: black;
   padding-top: 2rem;
@@ -95,21 +97,19 @@ header {
       }
 
       .nav-bar {
-        display: flex;
-        align-items: center;
+        @include flexBox ($just: space-between);
         margin-left: auto;
         height: 100%;
 
         li {
+          height: 100%;
           display: inline-block;
           list-style: none;
           margin-right: 1rem;
-          height: 100%;
 
           a {
             display: inline-block;
             text-decoration: none;
-            // border: 1px solid black;
             line-height: 6rem;
             color: $black_text;
             text-transform: uppercase;

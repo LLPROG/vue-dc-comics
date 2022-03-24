@@ -1,0 +1,15 @@
+@mixin flexBox($just: center, $align: center, $wrap: nowrap) {
+    display: flex;
+    justify-content: $just;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin positions ($pos: relative, $top: none, $right: none, $bottom: none, $left: none, $Tleft: 0, $Ttop: 0) {
+   position: $pos;
+   top: $top;
+   right: $right;
+   bottom: $bottom;
+   left: $left; 
+   transform: translate($Tleft,$Ttop);
+}
